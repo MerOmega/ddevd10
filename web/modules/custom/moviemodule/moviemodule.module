@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * This file use hook functions.
+ */
+
+ /**
+  * Implements hook_cron().
+  */
+
+function moviemodule_cron(){
+  \drupal::messenger()->addMessage(t("Hey"));
+}
+
+/**
+ * Imlements hook_form_alter
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ * @return void
+ */
+function moviemodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if($form_id == 'commerce_product_movie_edit_form'){
+    $form['actions']['submit']['#value'] = t("Edit this shit");
+  }
+}
+

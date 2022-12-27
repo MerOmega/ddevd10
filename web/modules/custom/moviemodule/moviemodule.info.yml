@@ -1,0 +1,8 @@
+name: 'Movie API Connector'
+type: module
+core_version_requirement: ^9 || ^10
+description: 'This module connects drupal with The movie db API '
+package: 'Globant College modules'
+dependencies:
+  - 'commerce:commerce'
+php: 7.4

@@ -1,0 +1,22 @@
+uuid: fca71452-fa67-4068-9f69-e48708d78a83
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.movie
+id: node.movie.status
+field_name: status
+entity_type: node
+bundle: movie
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

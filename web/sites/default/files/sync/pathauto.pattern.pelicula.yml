@@ -1,0 +1,33 @@
+uuid: 75012379-64ee-4be4-afb9-8d007ac66e59
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: pelicula
+label: pelicula
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:title]'
+selection_criteria:
+  b3535f6c-6bce-4ec9-8727-c58dae51de43:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: b3535f6c-6bce-4ec9-8727-c58dae51de43
+    context_mapping:
+      node: node
+    bundles:
+      movie: movie
+  da9acb3c-b615-4bb1-b569-2617e71931fa:
+    id: language
+    negate: false
+    uuid: da9acb3c-b615-4bb1-b569-2617e71931fa
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

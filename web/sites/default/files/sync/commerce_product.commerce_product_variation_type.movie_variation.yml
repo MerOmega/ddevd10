@@ -1,0 +1,10 @@
+uuid: d55d662c-8263-4df8-b01a-186bfc3e4204
+langcode: en
+status: true
+dependencies: {  }
+id: movie_variation
+label: 'Movie variation'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: true

@@ -1,0 +1,29 @@
+uuid: 5016d358-8b7e-4803-ab39-bea856cf0c67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trailer
+    - media.type.remote_video
+    - node.type.movie
+id: node.movie.field_trailer
+field_name: field_trailer
+entity_type: node
+bundle: movie
+label: trailer
+description: 'Add an external link to the trailer of this movie'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

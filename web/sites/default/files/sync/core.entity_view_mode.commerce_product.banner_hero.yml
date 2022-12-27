@@ -1,0 +1,10 @@
+uuid: cbe75641-4293-471a-94b3-57cb506558dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.banner_hero
+label: 'Banner Hero'
+targetEntityType: commerce_product
+cache: true

@@ -1,0 +1,34 @@
+uuid: 72de9b15-0701-4f0d-bb8c-58c14e45f77b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: movie
+label: actor
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:title]'
+selection_criteria:
+  df75cc69-ad38-45e1-b96a-f9242b3f34de:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: df75cc69-ad38-45e1-b96a-f9242b3f34de
+    context_mapping:
+      node: node
+    bundles:
+      actor: actor
+  156e9861-44e1-4350-92fb-b85d36afb431:
+    id: language
+    negate: false
+    uuid: 156e9861-44e1-4350-92fb-b85d36afb431
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

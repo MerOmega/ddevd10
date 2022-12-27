@@ -1,0 +1,29 @@
+uuid: 4c5c5c55-8d83-42a1-8bdf-2dd06a7fda1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.movie_variation
+    - field.storage.commerce_product_variation.field_cover
+    - media.type.image
+id: commerce_product_variation.movie_variation.field_cover
+field_name: field_cover
+entity_type: commerce_product_variation
+bundle: movie_variation
+label: Cover
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

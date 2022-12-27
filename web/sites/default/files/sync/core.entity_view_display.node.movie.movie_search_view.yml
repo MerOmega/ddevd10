@@ -1,0 +1,46 @@
+uuid: e8b1c84b-6825-4147-bb86-996bb9b6a2b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.movie_search_view
+    - field.field.node.movie.body
+    - field.field.node.movie.field_banner_display
+    - field.field.node.movie.field_cover
+    - field.field.node.movie.field_director
+    - field.field.node.movie.field_genre
+    - field.field.node.movie.field_trailer
+    - image.style.medium
+    - node.type.movie
+  module:
+    - layout_builder
+    - media
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.movie.movie_search_view
+targetEntityType: node
+bundle: movie
+mode: movie_search_view
+content:
+  field_cover:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_banner_display: true
+  field_director: true
+  field_genre: true
+  field_trailer: true
+  langcode: true
+  links: true

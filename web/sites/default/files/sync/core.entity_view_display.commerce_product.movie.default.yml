@@ -1,0 +1,203 @@
+uuid: 7df3c873-7b19-4ade-8e3a-8e555092f96c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.movie
+    - field.field.commerce_product.movie.field_banner
+    - field.field.commerce_product.movie.field_director
+    - field.field.commerce_product.movie.field_genre
+    - field.field.commerce_product.movie.field_summary
+    - field.field.commerce_product.movie.layout_builder__layout
+    - field.field.commerce_product_variation.movie_variation.field_cover
+  module:
+    - commerce_product
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          1d5c27be-1458-402f-a04c-d4c39b9a0b20:
+            uuid: 1d5c27be-1458-402f-a04c-d4c39b9a0b20
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:movie_variation:field_cover'
+              label: Cover
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: max_650x650
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d8df26fd-0478-4e95-b526-42d723e6dd0f:
+            uuid: d8df26fd-0478-4e95-b526-42d723e6dd0f
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:movie_variation:price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: inline
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          1fb0c270-4476-4c2a-a91f-eff81da4d92a:
+            uuid: 1fb0c270-4476-4c2a-a91f-eff81da4d92a
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:movie:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          c458a177-738f-4f3e-abae-85b1cecb5642:
+            uuid: c458a177-738f-4f3e-abae-85b1cecb5642
+            region: second
+            configuration:
+              id: 'field_block:commerce_product:movie:field_summary'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          adde486a-ffe0-48f4-ba63-1ab9620573ab:
+            uuid: adde486a-ffe0-48f4-ba63-1ab9620573ab
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:field_genre'
+              label: Genre
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a641a50d-7450-4707-95b2-45d724f67128:
+            uuid: a641a50d-7450-4707-95b2-45d724f67128
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:field_director'
+              label: Director
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: commerce_product.movie.default
+targetEntityType: commerce_product
+bundle: movie
+mode: default
+content:
+  field_banner:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: first
+  field_genre:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: first
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: first
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_director: true
+  langcode: true
+  layout_builder__layout: true
+  stores: true
+  uid: true

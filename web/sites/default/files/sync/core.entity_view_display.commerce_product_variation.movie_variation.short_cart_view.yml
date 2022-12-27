@@ -1,0 +1,36 @@
+uuid: a60abfff-9361-45cd-871c-0d9b39663b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.movie_variation
+    - core.entity_view_mode.commerce_product_variation.short_cart_view
+    - field.field.commerce_product_variation.movie_variation.field_cover
+  module:
+    - commerce_price
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: commerce_product_variation.movie_variation.short_cart_view
+targetEntityType: commerce_product_variation
+bundle: movie_variation
+mode: short_cart_view
+content:
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_cover: true
+  langcode: true
+  list_price: true
+  product_id: true
+  sku: true
+  title: true

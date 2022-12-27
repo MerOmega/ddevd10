@@ -1,0 +1,13 @@
+uuid: 48b0c889-c754-4fe9-9593-0e6729d2bb11
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+id: block_content.carousel.default
+targetEntityType: block_content
+bundle: carousel
+mode: default
+content: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,14 @@
+#node.type.actor.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - moviemodule
+name: 'Actor'
+type: actor
+description: 'Content Type for actors and directors'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

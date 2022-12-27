@@ -1,0 +1,17 @@
+uuid: 2f02cefd-5b4d-4e19-9b79-e733443bfd72
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: movie
+type: movie
+description: 'Create or edit your movie'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

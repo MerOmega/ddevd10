@@ -1,0 +1,14 @@
+uuid: e7d5a325-7af5-47cc-8223-99d944b61403
+langcode: en
+status: true
+dependencies: {  }
+id: movie
+label: Movie
+traits: {  }
+locked: false
+description: ''
+variationType: null
+variationTypes:
+  - movie_variation
+multipleVariations: false
+injectVariationFields: true

@@ -1,0 +1,17 @@
+uuid: 99dd3960-1542-4c7f-8d76-d7257f72a4d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_store
+    - entity
+  enforced:
+    module:
+      - commerce_store
+_core:
+  default_config_hash: _4Uh3mQA18aGlat_JmyPTEDWXiuiexldraA0zgTTbGY
+id: commerce_store_delete_action
+label: 'Delete store'
+type: commerce_store
+plugin: 'entity_delete_action:commerce_store'
+configuration: {  }

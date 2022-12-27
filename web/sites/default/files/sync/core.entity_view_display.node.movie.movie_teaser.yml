@@ -1,0 +1,114 @@
+uuid: a7ba9cf5-1b9a-4e36-88e2-bea337ee500c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.movie_teaser
+    - field.field.node.movie.body
+    - field.field.node.movie.field_banner_display
+    - field.field.node.movie.field_cover
+    - field.field.node.movie.field_director
+    - field.field.node.movie.field_genre
+    - field.field.node.movie.field_trailer
+    - node.type.movie
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          be92749f-be8a-433b-bc73-a3c1704dc335:
+            uuid: be92749f-be8a-433b-bc73-a3c1704dc335
+            region: content
+            configuration:
+              id: 'field_block:node:movie:body'
+              label: Sumary
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6256fdce-09cd-4498-aec4-dce38910fa0d:
+            uuid: 6256fdce-09cd-4498-aec4-dce38910fa0d
+            region: content
+            configuration:
+              id: 'field_block:node:movie:field_banner_display'
+              label: 'banner display'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.movie.movie_teaser
+targetEntityType: node
+bundle: movie
+mode: movie_teaser
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_cover:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 106
+    region: first
+  field_genre:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_trailer:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_banner_display: true
+  field_director: true
+  langcode: true

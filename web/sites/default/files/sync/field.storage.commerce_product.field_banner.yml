@@ -1,0 +1,20 @@
+uuid: b8209b86-d6d2-47f4-8084-a548ab5533de
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - media
+id: commerce_product.field_banner
+field_name: field_banner
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

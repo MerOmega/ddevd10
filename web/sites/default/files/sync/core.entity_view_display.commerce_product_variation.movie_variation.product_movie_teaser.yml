@@ -1,0 +1,121 @@
+uuid: 712fd6ec-cb7a-4be3-bed0-d4dddcc810f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.movie_variation
+    - core.entity_view_mode.commerce_product_variation.product_movie_teaser
+    - field.field.commerce_product_variation.movie_variation.field_cover
+  module:
+    - commerce_price
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          cce07e00-352c-41e4-9486-06d2923350cf:
+            uuid: cce07e00-352c-41e4-9486-06d2923350cf
+            region: content
+            configuration:
+              id: 'field_block:commerce_product_variation:movie_variation:field_cover'
+              label: Cover
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: max_325x325
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          94c6ce77-bc92-4b5e-8ae6-8d0c548b2fc9:
+            uuid: 94c6ce77-bc92-4b5e-8ae6-8d0c548b2fc9
+            region: content
+            configuration:
+              id: 'field_block:commerce_product_variation:movie_variation:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          90ead199-ea49-4f40-aed9-75c9d8278948:
+            uuid: 90ead199-ea49-4f40-aed9-75c9d8278948
+            region: content
+            configuration:
+              id: 'field_block:commerce_product_variation:movie_variation:price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: above
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: commerce_product_variation.movie_variation.product_movie_teaser
+targetEntityType: commerce_product_variation
+bundle: movie_variation
+mode: product_movie_teaser
+content:
+  field_cover:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  product_id: true
+  sku: true
+  title: true

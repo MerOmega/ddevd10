@@ -1,0 +1,10 @@
+uuid: bc0e456d-c6ee-4a3c-b70f-bf67e845c1a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.short_cart_view
+label: 'Product Price'
+targetEntityType: commerce_product_variation
+cache: true

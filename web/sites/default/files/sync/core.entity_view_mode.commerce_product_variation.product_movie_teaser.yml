@@ -1,0 +1,10 @@
+uuid: 6fdeb2ce-b82f-475a-8776-a537aeb703f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.product_movie_teaser
+label: 'Product Cover Variation'
+targetEntityType: commerce_product_variation
+cache: true

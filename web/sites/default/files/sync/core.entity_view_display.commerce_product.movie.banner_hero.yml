@@ -1,0 +1,140 @@
+uuid: a4fc586f-d775-4cf9-a728-decf015aa29e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.movie
+    - core.entity_view_mode.commerce_product.banner_hero
+    - field.field.commerce_product.movie.field_banner
+    - field.field.commerce_product.movie.field_director
+    - field.field.commerce_product.movie.field_genre
+    - field.field.commerce_product.movie.field_summary
+    - field.field.commerce_product.movie.layout_builder__layout
+  module:
+    - commerce_product
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          815336c8-3cb7-4e40-8597-6ab5e3f0b19c:
+            uuid: 815336c8-3cb7-4e40-8597-6ab5e3f0b19c
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:field_banner'
+              label: Banner
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          fd533ed9-c262-4d52-8e08-16877b1fe789:
+            uuid: fd533ed9-c262-4d52-8e08-16877b1fe789
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:field_summary'
+              label: Summary
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          0b2fd96c-20a3-4186-b757-3c5e8073872f:
+            uuid: 0b2fd96c-20a3-4186-b757-3c5e8073872f
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: commerce_product.movie.banner_hero
+targetEntityType: commerce_product
+bundle: movie
+mode: banner_hero
+content:
+  field_banner:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: first
+  field_genre:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: first
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: first
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_director: true
+  langcode: true
+  layout_builder__layout: true
+  stores: true
+  uid: true

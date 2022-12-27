@@ -1,0 +1,29 @@
+uuid: 2ced4736-9871-4d17-9a9e-2ed0218fe61a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_display
+    - media.type.image
+    - node.type.movie
+id: node.movie.field_banner_display
+field_name: field_banner_display
+entity_type: node
+bundle: movie
+label: 'banner display'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

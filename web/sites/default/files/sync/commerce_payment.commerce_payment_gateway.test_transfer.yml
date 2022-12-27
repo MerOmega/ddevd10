@@ -1,0 +1,19 @@
+uuid: 5fb9c550-43e9-4b16-adf2-339f36043390
+langcode: en
+status: true
+dependencies: {  }
+id: test_transfer
+label: 'Test Transfer'
+weight: null
+plugin: manual
+configuration:
+  display_label: 'Test Transfer Completed'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  instructions:
+    value: "Send an email to test@test.com\r\nAny questions will be answered as soon as possible"
+    format: plain_text
+conditions: {  }
+conditionOperator: AND

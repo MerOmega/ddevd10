@@ -1,0 +1,33 @@
+uuid: f8467f84-88f3-4ab2-b5b1-cf442cad0e7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: test
+label: movie
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:title]'
+selection_criteria:
+  694b18f6-bc3f-4054-b5f0-db65b85d5d38:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 694b18f6-bc3f-4054-b5f0-db65b85d5d38
+    context_mapping:
+      node: node
+    bundles:
+      movie: movie
+  a3235227-9149-4204-9071-18968cc00d13:
+    id: language
+    negate: false
+    uuid: a3235227-9149-4204-9071-18968cc00d13
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

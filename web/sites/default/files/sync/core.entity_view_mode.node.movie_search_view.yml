@@ -1,0 +1,10 @@
+uuid: 0f8b8b7b-826f-4ed2-a45b-aca6316cacbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.movie_search_view
+label: 'Movie search view'
+targetEntityType: node
+cache: true

@@ -1,0 +1,21 @@
+uuid: 16d7055d-84d6-4025-9201-28415d89fedc
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.movie
+    - field.storage.commerce_product.layout_builder__layout
+  module:
+    - layout_builder
+id: commerce_product.movie.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: commerce_product
+bundle: movie
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

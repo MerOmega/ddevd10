@@ -1,0 +1,89 @@
+uuid: 4fd32b80-d7c2-42dc-ac9a-7a93c0617b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.movie
+    - core.entity_view_mode.commerce_product.product_teaser_display
+    - field.field.commerce_product.movie.field_banner
+    - field.field.commerce_product.movie.field_director
+    - field.field.commerce_product.movie.field_genre
+    - field.field.commerce_product.movie.field_summary
+    - field.field.commerce_product.movie.layout_builder__layout
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e0a99f74-36bc-41d8-bd32-249902a36bca:
+            uuid: e0a99f74-36bc-41d8-bd32-249902a36bca
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: product_movie_teaser
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ecfb92dd-04d0-441b-ac66-a85b4937ae0e:
+            uuid: ecfb92dd-04d0-441b-ac66-a85b4937ae0e
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:movie:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: commerce_product.movie.product_teaser_display
+targetEntityType: commerce_product
+bundle: movie
+mode: product_teaser_display
+content:
+  variations:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: product_movie_teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_banner: true
+  field_director: true
+  field_genre: true
+  field_summary: true
+  langcode: true
+  layout_builder__layout: true
+  stores: true
+  title: true
+  uid: true
