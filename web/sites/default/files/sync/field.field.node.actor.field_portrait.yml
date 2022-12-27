@@ -1,0 +1,31 @@
+uuid: 2db093f3-5875-4d1f-a446-96502a61e2d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portrait
+    - media.type.image
+    - node.type.actor
+_core:
+  default_config_hash: 3R3Cv9yt7spr0rW4lE954gzmfKaXYiBQdA6CSlRvTlU
+id: node.actor.field_portrait
+field_name: field_portrait
+entity_type: node
+bundle: actor
+label: portrait
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

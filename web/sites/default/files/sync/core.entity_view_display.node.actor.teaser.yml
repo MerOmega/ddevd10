@@ -1,0 +1,33 @@
+uuid: 1b8ed2d7-7f71-46ac-9d2d-96e28ab1c040
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.actor.body
+    - field.field.node.actor.field_portrait
+    - node.type.actor
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: zB4HzlreBhvTW_0UwXbQ-lnePlthg6jNV_k0TuI-tR0
+id: node.actor.teaser
+targetEntityType: node
+bundle: actor
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_portrait: true
+  langcode: true

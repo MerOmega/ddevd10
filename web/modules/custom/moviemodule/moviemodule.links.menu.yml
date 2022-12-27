@@ -1,0 +1,8 @@
+moviemodule.simplecontentpage:
+  title: MovieAPI
+  description: Link to method
+  route_name: moviemodule.simplecontent
+  weight: 7
+  menu_name: movieAPI
+  parent: system.admin
+

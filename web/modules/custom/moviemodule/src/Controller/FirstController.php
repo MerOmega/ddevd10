@@ -6,11 +6,8 @@
  */
 
 namespace Drupal\moviemodule\Controller;
-
 use Drupal\Core\Controller\ControllerBase;
-
 use Symfony\Component\DependencyInjection\ContainerInterface;
-
 use GuzzleHttp\ClientInterface;
 
 class FirstController extends ControllerBase{
@@ -39,17 +36,12 @@ class FirstController extends ControllerBase{
       'GET',
       'https://api.themoviedb.org/3/search/person?api_key=7dddb325f57844046ce6315eeb90960f&language=en-US&query='
       .$query
-      .'&page=1&include_adult=false', [
-      'headers' => [
-        'Accept' => 'text/plain',
-      ],
-    ]
+      .'&page=1&include_adult=false',
     );
 
     if ($request->getStatusCode() != 200) {
       return [];
     }
-
     $posts = $request->getBody()->getContents();
     $build = [
       '#markup' => $posts,
@@ -59,19 +51,18 @@ class FirstController extends ControllerBase{
 
   public function simpleContent()
   {
-    return[
-      '#type'=>'markup',
-      '#markup' => t("Hello world, time flies like an arrow"),
-    ];
+      $build = \Drupal::formBuilder()->getForm('Drupal\moviemodule\Form\SearchForm');
+    return $build;
   }
 
 
-  public function variableContent($name_1,$name_2)
+  public function variableContent($name_1)
   {
+    $value = $this->apiConnect($name_1);
     return[
       '#type'=>'markup',
-      '#markup' => t("Hello world, @name_1 and @name_2",
-         ['@name_1'=> $name_1, '@name_2' => $name_2]),
+      '#markup' => t("Hello world, @name_1",
+         ['@name_1'=> $name_1]),
     ];
   }
 

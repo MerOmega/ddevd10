@@ -1,0 +1,31 @@
+uuid: d419544c-1f60-492c-8e86-318ae0b20ac7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.actor.body
+    - field.field.node.actor.field_portrait
+    - node.type.actor
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: EHdxje9M6_kS8AcI06YRzrtc52AI-PkejFTMo0FTdWE
+id: node.actor.default
+targetEntityType: node
+bundle: actor
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_portrait: true
+  langcode: true

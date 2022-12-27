@@ -1,0 +1,25 @@
+uuid: 64415312-d4ef-40e7-a30b-535e72769cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.actor
+  module:
+    - text
+_core:
+  default_config_hash: w-neA0W_wEripCXYDYclABPk20maAokXP9bpVWDg-4o
+id: node.actor.body
+field_name: body
+entity_type: node
+bundle: actor
+label: Body
+description: 'More specific information about the actor/director.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

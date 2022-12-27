@@ -1,0 +1,16 @@
+uuid: 33fce1ef-d1d5-419b-a958-5a7a3d90013f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - moviemodule
+_core:
+  default_config_hash: oFkIihiiXcl-1LQ8D2hYcoB92RhdThvnhqfayerN11c
+name: Actor
+type: actor
+description: 'Content Type for actors and directors'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

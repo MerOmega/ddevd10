@@ -9,7 +9,7 @@ moviemodule.simplecontent:
     _admin_route: true
 
 moviemodule.variablecontent:
-  path: '/mycustompath/{name_1}/{name_2}'
+  path: '/mycustompath/{name_1}'
   defaults:
     _controller: '\Drupal\moviemodule\Controller\FirstController::variableContent'
     _title: 'Movie APIs Params'
@@ -27,4 +27,3 @@ moviemodule.apiconnect:
     _permission: 'access content'
   options:
     _admin_route: true
-
