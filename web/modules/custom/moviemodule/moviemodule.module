@@ -25,4 +25,14 @@ function moviemodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
     $form['actions']['submit']['#value'] = t("Edit this shit");
   }
 }
+/**
+ * Implements hook_theme().
+ */
+function moviemodule_theme($existing, $type, $theme, $path) {
+  return [
+    'my_template' => [
+      'variables' => ['test_var' => NULL],
+    ],
+  ];
+}
 

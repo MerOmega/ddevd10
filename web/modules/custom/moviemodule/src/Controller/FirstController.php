@@ -42,11 +42,17 @@ class FirstController extends ControllerBase{
     if ($request->getStatusCode() != 200) {
       return [];
     }
-    $posts = $request->getBody()->getContents();
-    $build = [
-      '#markup' => $posts,
+    $actors = $request->getBody()->getContents();
+    $decode = json_decode($actors);
+    var_dump($decode->results[0]->name);
+//    $build = [
+//      '#markup' => $actors,
+//    ];
+//    return $build;
+    return [
+      '#theme' => 'my_template',
+      '#test_var' => $decode->results[0]->name,
     ];
-    return $build;
   }
 
   public function simpleContent()
@@ -59,10 +65,9 @@ class FirstController extends ControllerBase{
   public function variableContent($name_1)
   {
     $value = $this->apiConnect($name_1);
-    return[
-      '#type'=>'markup',
-      '#markup' => t("Hello world, @name_1",
-         ['@name_1'=> $name_1]),
+    return [
+      '#theme' => 'my_template',
+      '#test_var' => $this->t('Test Value'),
     ];
   }
 
