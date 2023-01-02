@@ -1,1 +1,0 @@
-window.drupalTranslations = {"strings":{"":{"Changed":"Modificado","Open":"Abierta","Collapse":"Plegar","Edit":"Editar"}},"pluralFormula":{"1":0,"default":1}};

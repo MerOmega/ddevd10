@@ -1,3 +1,28 @@
-<h1>Hey there</h1>
-# above will return an array which can be iterated
-<p> {{ test_var }}</p>
+<h1>List of Actors/Director</h1>
+</br>
+
+
+  {% for value in test_var %}
+<div class="actor-grid">
+    <h2> {{ value.name }}</h2>
+  <div class="profile-image">
+    <img style="max-width: 150px;" src="https://image.tmdb.org/t/p/w500{{ value.profile_path }}">
+  </div>
+    <div class="relevant-movies">
+      <p> Known role: {{ value.known_for_department }}</p>
+        {% if value.known_for[1].original_title is defined or value.known_for[1].original_title is defined %}
+          <table>
+            <th>Known for</th>
+            <tr>
+              {% for value2 in value.known_for %}
+                <td> {{ value2.original_title }} </td>
+              {% endfor %}
+            </tr>
+          </table>
+        {% endif %}
+      <a href="/mycustompath/actor/create/{{ value.id }}">Create and edit</a>
+    </div>
+    <p></p>
+    </br>
+</div>
+  {% endfor %}
