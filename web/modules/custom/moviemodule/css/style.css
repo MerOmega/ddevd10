@@ -1,0 +1,19 @@
+#api-title{
+  text-align: center;
+  background-color: #3b3b3b;
+  border-radius: 10px;
+}
+
+.actor-grid{
+  text-align: center;
+  border-radius: 4px;
+}
+
+.movies-related{
+  list-style-type: none;
+  text-align: left;
+}
+
+.button{
+  padding-top: 1rem;
+}

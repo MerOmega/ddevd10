@@ -44,7 +44,7 @@ class SearchForm extends FormBase{
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state):RedirectResponse {
     // Retrieve the search query from the form state.
     $search_query = $form_state->getValue('keyword');
 
@@ -55,6 +55,6 @@ class SearchForm extends FormBase{
         'search_query' => $search_query,
       ],
     ]);
-    $response->send();
+    return $response->send();
   }
 }

@@ -1,4 +1,7 @@
-<h1>List of Actors/Director</h1>
+
+{{ attach_library('moviemodule/movielibrary') }}
+
+<h1 id="api-title">List of Actors/Director</h1>
 </br>
 
 
@@ -11,16 +14,13 @@
     <div class="relevant-movies">
       <p> Known role: {{ value.known_for_department }}</p>
         {% if value.known_for[1].original_title is defined or value.known_for[1].original_title is defined %}
-          <table>
-            <th>Known for</th>
-            <tr>
+          <ul class="movies-related">
               {% for value2 in value.known_for %}
-                <td> {{ value2.original_title }} </td>
+                <li> {{ value2.original_title }} </li>
               {% endfor %}
-            </tr>
-          </table>
+          </ul>
         {% endif %}
-      <a href="/mycustompath/actor/create/{{ value.id }}">Create and edit</a>
+      <a class="button" href="/mycustompath/actor/create/{{ value.id }}">Create and edit</a>
     </div>
     <p></p>
     </br>

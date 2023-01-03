@@ -55,7 +55,6 @@ class FirstController extends ControllerBase{
 
   public function createActor(int $id): TrustedRedirectResponse
   {
-
     $request = $this->httpClient->
     request(
       'GET',
@@ -80,7 +79,7 @@ class FirstController extends ControllerBase{
     $node->save();
     $url = Url::fromRoute('entity.node.edit_form', ['node' => $node->id()])->toString();
     $response = new TrustedRedirectResponse($url);
-    $response->send();
+    return $response->send();
   }
 
 
