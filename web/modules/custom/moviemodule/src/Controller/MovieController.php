@@ -75,6 +75,11 @@ class MovieController extends ControllerBase{
         'value' => $actors->biography,
         'format' => 'full_html',
       ],
+      'field_urlportrait' =>[
+        'summary' => '',
+        'value' => "<img src=\"https://image.tmdb.org/t/p/w500".$actors->profile_path."\">",
+        'format' => 'full_html',
+      ],
     ]);
     $node->save();
     $url = Url::fromRoute('entity.node.edit_form', ['node' => $node->id()])->toString();
