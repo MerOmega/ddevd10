@@ -1,0 +1,21 @@
+uuid: 7ff4a99d-679b-4f6a-a482-436a1d89ab2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_urlportrait
+    - node.type.actor
+  module:
+    - text
+id: node.actor.field_urlportrait
+field_name: field_urlportrait
+entity_type: node
+bundle: actor
+label: 'url portrait'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
