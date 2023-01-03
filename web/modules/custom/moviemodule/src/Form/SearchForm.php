@@ -50,7 +50,7 @@ class SearchForm extends FormBase{
 
     // Redirect the user to the /other-controller-route route, passing the
     // search_query query parameter in the URL.
-    $response = new RedirectResponse('/mycustompath/search/'.$search_query, 302, [
+    $response = new RedirectResponse('/movieapi/search/'.$search_query, 302, [
       'query' => [
         'search_query' => $search_query,
       ],

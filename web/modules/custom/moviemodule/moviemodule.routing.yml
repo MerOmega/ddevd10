@@ -1,7 +1,7 @@
 moviemodule.simplecontent:
-  path: '/mycustompath'
+  path: '/movieapi'
   defaults:
-    _controller: '\Drupal\moviemodule\Controller\FirstController::simpleContent'
+    _controller: '\Drupal\moviemodule\Controller\MovieController::formContent'
     _title: 'Movie APIs'
   requirements:
     _permission: 'access content'
@@ -9,18 +9,18 @@ moviemodule.simplecontent:
     _admin_route: true
 
 moviemodule.apiconnect:
-  path: '/mycustompath/search/{query}'
+  path: '/movieapi/search/{query}'
   defaults:
-    _controller: '\Drupal\moviemodule\Controller\FirstController::apiConnect'
+    _controller: '\Drupal\moviemodule\Controller\MovieController::apiConnect'
     _title: 'Movie APIs Search'
   requirements:
     _permission: 'access content'
   options:
     _admin_route: true
 moviemodule.createactor:
-  path: '/mycustompath/actor/create/{id}'
+  path: '/movieapi/actor/create/{id}'
   defaults:
-    _controller: '\Drupal\moviemodule\Controller\FirstController::createActor'
+    _controller: '\Drupal\moviemodule\Controller\MovieController::createActor'
     _title: 'Movie APIs Search'
   requirements:
     _permission: 'access content'

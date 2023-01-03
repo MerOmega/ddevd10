@@ -13,7 +13,7 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Routing\TrustedRedirectResponse;
 use Drupal\Core\Url;
 
-class FirstController extends ControllerBase{
+class MovieController extends ControllerBase{
 
   protected $httpClient;
 
@@ -83,7 +83,7 @@ class FirstController extends ControllerBase{
   }
 
 
-  public function simpleContent()
+  public function formContent()
   {
     $build = \Drupal::formBuilder()->getForm('Drupal\moviemodule\Form\SearchForm');
     return $build;
