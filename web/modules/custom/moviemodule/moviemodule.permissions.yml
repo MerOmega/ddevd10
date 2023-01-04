@@ -1,0 +1,5 @@
+administer moviemodule:
+  title: 'Movie API'
+  description: 'To allow roles to use this API'
+  restrict access: true
+

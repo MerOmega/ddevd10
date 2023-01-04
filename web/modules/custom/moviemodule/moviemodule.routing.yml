@@ -4,7 +4,7 @@ moviemodule.simplecontent:
     _controller: '\Drupal\moviemodule\Controller\MovieController::formContent'
     _title: 'Movie APIs'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer moviemodule'
   options:
     _admin_route: true
 
@@ -14,7 +14,7 @@ moviemodule.apiconnect:
     _controller: '\Drupal\moviemodule\Controller\MovieController::apiConnect'
     _title: 'Movie APIs Search'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer moviemodule'
   options:
     _admin_route: true
 moviemodule.createactor:
@@ -23,6 +23,6 @@ moviemodule.createactor:
     _controller: '\Drupal\moviemodule\Controller\MovieController::createActor'
     _title: 'Movie APIs Search'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer moviemodule'
   options:
     _admin_route: true

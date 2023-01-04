@@ -18,6 +18,9 @@ class SearchForm extends FormBase{
     return 'searchform_form';
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function buildForm(array $form, FormStateInterface $form_state)
   {
     $form['keyword'] = [
