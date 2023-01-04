@@ -1,47 +1,47 @@
-label: Contenido
+label: Content
 display:
   default:
-    display_title: 'Por defecto'
+    display_title: Default
     display_options:
-      title: Contenido
+      title: Content
       fields:
         type:
-          label: 'Tipo de contenido'
+          label: 'Content type'
           separator: ', '
         status:
-          label: Estado
+          label: Status
           settings:
-            format_custom_false: 'Sin publicar'
-            format_custom_true: Publicado
+            format_custom_false: Unpublished
+            format_custom_true: Published
         operations:
-          label: Operaciones
+          label: Operations
       exposed_form:
         options:
-          submit_button: Filtro
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           sort_asc_label: Asc
           sort_desc_label: Desc
       filters:
         type:
           expose:
-            label: 'Tipo de contenido'
+            label: 'Content type'
         status:
           expose:
-            label: Estado
+            label: Status
           group_info:
             group_items:
               1:
-                title: Publicado
+                title: Published
               2:
-                title: 'Sin publicar'
+                title: Unpublished
         langcode:
           expose:
-            label: Idioma
+            label: Language
   page_1:
-    display_title: Página
+    display_title: Page
     display_options:
       menu:
-        title: Contenido
+        title: Content
       tab_options:
-        title: Contenido
+        title: Content

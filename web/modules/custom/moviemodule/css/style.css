@@ -3,12 +3,18 @@
   background-color: #3b3b3b;
   border-radius: 10px;
 }
-
-.actor-grid{
-  text-align: center;
-  border-radius: 4px;
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 20px;
 }
-
+.card{
+  width: 18rem;
+  text-align: center;
+}
+.profile-image{
+  align-self: center;
+}
 .movies-related{
   list-style-type: none;
   text-align: left;
@@ -16,4 +22,12 @@
 
 .button{
   padding-top: 1rem;
+}
+
+.hiden{
+  display: none;
+}
+
+.uncover{
+  display: block;
 }

@@ -5,6 +5,11 @@ dependencies:
   module:
     - node
     - text
+  enforced:
+    module:
+      - moviemodule
+_core:
+  default_config_hash: nrJ9tK-IY8_K6-vgORQ7qAxrKzZg4SDXNzwMcV-paR0
 id: node.field_urlportrait
 field_name: field_urlportrait
 entity_type: node

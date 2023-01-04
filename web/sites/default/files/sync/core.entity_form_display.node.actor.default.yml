@@ -1,10 +1,10 @@
-uuid: ace1896c-15f6-4a19-b763-fd879dfd1044
+uuid: 6fe29800-84b7-4fe4-8624-8e72a7d7eb27
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.actor.body
-    - field.field.node.actor.field_portrait
+    - field.field.node.actor.field_urlportrait
     - node.type.actor
   module:
     - path
@@ -85,4 +85,4 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
-  field_portrait: true
+  field_urlportrait: true

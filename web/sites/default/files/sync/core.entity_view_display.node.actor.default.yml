@@ -1,10 +1,10 @@
-uuid: d419544c-1f60-492c-8e86-318ae0b20ac7
+uuid: 033a3945-98b8-4efe-bfe2-e7046ad9a0ca
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.actor.body
-    - field.field.node.actor.field_portrait
+    - field.field.node.actor.field_urlportrait
     - node.type.actor
   module:
     - text
@@ -17,15 +17,23 @@ bundle: actor
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
+  field_urlportrait:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
-  field_portrait: true
   langcode: true

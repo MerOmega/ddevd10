@@ -1,35 +1,35 @@
 display:
   default:
-    display_title: 'Por defecto'
+    display_title: Default
     display_options:
       fields:
         name:
-          label: 'Nombre de usuario'
+          label: Username
         status:
-          label: Estado
+          label: Status
         operations:
-          label: Operaciones
+          label: Operations
         mail:
           separator: ', '
       pager:
         options:
           expose:
-            items_per_page_label: 'Elementos por página'
-            items_per_page_options_all_label: '- Todo -'
-            offset_label: Desplazamiento
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
       exposed_form:
         options:
-          submit_button: Filtro
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           sort_asc_label: Asc
           sort_desc_label: Desc
       filters:
         status:
           group_info:
-            label: Estado
+            label: Status
   page_1:
-    display_title: Página
+    display_title: Page
     display_options:
       menu:
-        title: Listado
+        title: List

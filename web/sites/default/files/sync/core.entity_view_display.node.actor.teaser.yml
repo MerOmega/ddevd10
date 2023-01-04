@@ -1,11 +1,11 @@
-uuid: 1b8ed2d7-7f71-46ac-9d2d-96e28ab1c040
+uuid: 383e86ae-e3e9-45a2-8030-290d4f22d145
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.actor.body
-    - field.field.node.actor.field_portrait
+    - field.field.node.actor.field_urlportrait
     - node.type.actor
   module:
     - text
@@ -29,5 +29,5 @@ content:
     weight: 100
     region: content
 hidden:
-  field_portrait: true
+  field_urlportrait: true
   langcode: true

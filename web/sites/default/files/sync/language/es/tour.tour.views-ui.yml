@@ -1,5 +1,5 @@
 tips:
   views-ui-fields:
-    label: Campos
+    label: Fields
   views-ui-preview:
-    label: 'Vista previa'
+    label: Preview

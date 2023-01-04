@@ -5,3 +5,10 @@ movielibrary:
   js:
     theme:
       js/script.js: {}
+bootstrap:
+  js:
+    /libraries/popper/popper.min.js: {}
+    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+  css:
+    component:
+      /libraries/bootstrap/dist/css/bootstrap.min.css: {}

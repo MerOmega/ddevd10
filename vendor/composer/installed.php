@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'drupal/recommended-project',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'c282c18518cb0e40095649a2b471020bcbf0bce4',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -223,6 +223,15 @@
             'reference' => '8.x-1.11',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../web/modules/contrib/address',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/bootstrap_barrio' => array(
+            'pretty_version' => '5.5.6',
+            'version' => '5.5.6.0',
+            'reference' => '5.5.6',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../web/themes/contrib/bootstrap_barrio',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -488,9 +497,9 @@
             'dev_requirement' => false,
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c282c18518cb0e40095649a2b471020bcbf0bce4',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1088,6 +1097,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'twbs/bootstrap' => array(
+            'pretty_version' => 'v5.2.3',
+            'version' => '5.2.3.0',
+            'reference' => 'cb021439c683d9805e2864c58095b92d405e9b11',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twbs/bootstrap',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'twig/twig' => array(
             'pretty_version' => 'v3.4.3',
             'version' => '3.4.3.0',
@@ -1096,6 +1114,12 @@
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'twitter/bootstrap' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v5.2.3',
+            ),
         ),
         'webflo/drupal-finder' => array(
             'pretty_version' => '1.2.2',

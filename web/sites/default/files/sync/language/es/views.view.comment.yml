@@ -1,9 +1,9 @@
-label: Comentarios
+label: Comments
 display:
   default:
-    display_title: 'Por defecto'
+    display_title: Default
     display_options:
-      title: Comentarios
+      title: Comments
       fields:
         subject:
           separator: ', '
@@ -16,30 +16,30 @@ display:
         changed:
           separator: ', '
         operations:
-          label: Operaciones
+          label: Operations
         name_1:
           separator: ', '
       pager:
         options:
           expose:
-            items_per_page_label: 'Elementos por página'
-            items_per_page_options_all_label: '- Todo -'
-            offset_label: Desplazamiento
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
       exposed_form:
         options:
-          submit_button: Filtro
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           sort_asc_label: Asc
           sort_desc_label: Desc
       filters:
         langcode:
           expose:
-            label: Idioma
+            label: Language
   page_published:
     display_options:
       menu:
-        title: Comentarios
+        title: Comments
   page_unapproved:
     display_options:
       fields:
@@ -54,10 +54,10 @@ display:
         changed:
           separator: ', '
         operations:
-          label: Operaciones
+          label: Operations
         name_1:
           separator: ', '
       filters:
         langcode:
           expose:
-            label: Idioma
+            label: Language

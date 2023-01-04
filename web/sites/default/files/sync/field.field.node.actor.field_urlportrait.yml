@@ -7,6 +7,8 @@ dependencies:
     - node.type.actor
   module:
     - text
+_core:
+  default_config_hash: Cg-9BRUVYb22Yqe6nET_H2qwKZrSHXRcJs4GroaKzvk
 id: node.actor.field_urlportrait
 field_name: field_urlportrait
 entity_type: node
