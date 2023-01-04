@@ -3,7 +3,6 @@ movielibrary:
     theme:
       css/style.css: {}
   js:
-    theme:
       js/script.js: {}
 bootstrap:
   js:
