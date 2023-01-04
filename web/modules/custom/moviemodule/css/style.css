@@ -12,8 +12,6 @@
   width: 18rem;
   position: relative;
   text-align: center;
-  /* From https://css.glass */
-/* From https://css.glass */
   background: rgba(70, 63, 63, 0.55) !important;
   border-radius: 16px !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
@@ -21,18 +19,8 @@
   -webkit-backdrop-filter: blur(10.3px) !important;
   border: 1px solid rgba(70, 63, 63, 0.58) !important;
   transition: transform 0.6s;
-  
 }
 
-.cell {
-  /* Cell styles */
-  overflow: visible;
-  transition: height 0.3s; /* Add a transition to the height property */
-}
-
-.cell.expanded {
-  height: auto; /* Set the height to 'auto' to allow the cell to grow to fit its content */
-}
 
 .card:hover {
   /* Styles to apply when the mouse is hovering over the card */
