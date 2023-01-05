@@ -53,7 +53,9 @@ class __TwigTemplate_8a6557471b9cad7206a2bac6beb3bb34 extends Template
         $context['_seq'] = twig_ensure_traversable(($context["test_var"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
             // line 9
-            echo "    <div class=\"card\">
+            echo "    <div class=\"card\" id=\"";
+            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["value"], "id", [], "any", false, false, true, 9), 9, $this->source), "html", null, true);
+            echo "\">
       ";
             // line 10
             if ( !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["value"], "profile_path", [], "any", false, false, true, 10))) {
@@ -80,36 +82,13 @@ class __TwigTemplate_8a6557471b9cad7206a2bac6beb3bb34 extends Template
             echo "</p>
       </div>
       <div class=\"card-body\">
-          <div class=\"relevant-movies hidden\">
-              ";
-            // line 23
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "known_for", [], "any", false, true, true, 23), 1, [], "array", false, true, true, 23), "original_title", [], "any", true, true, true, 23) || twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "known_for", [], "any", false, true, true, 23), 1, [], "array", false, true, true, 23), "original_title", [], "any", true, true, true, 23))) {
-                // line 24
-                echo "                <ul class=\"movies-related\">
-                    ";
-                // line 25
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["value"], "known_for", [], "any", false, false, true, 25));
-                foreach ($context['_seq'] as $context["_key"] => $context["value2"]) {
-                    // line 26
-                    echo "                      <li> ";
-                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["value2"], "original_title", [], "any", false, false, true, 26), 26, $this->source), "html", null, true);
-                    echo " </li>
-                    ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value2'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 28
-                echo "                </ul>
-              ";
-            }
-            // line 30
-            echo "
+          <div class=\"relevant-movies\">
+                <ul class=\"movies-related\">
+                </ul>
           </div>
         <a class=\"button btn btn-primary\" href=\"/movieapi/actor/create/";
-            // line 32
-            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["value"], "id", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
+            // line 26
+            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["value"], "id", [], "any", false, false, true, 26), 26, $this->source), "html", null, true);
             echo "\">Create and edit</a>
         </div>
     </div>
@@ -118,7 +97,7 @@ class __TwigTemplate_8a6557471b9cad7206a2bac6beb3bb34 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 30
         echo "</div>
 ";
     }
@@ -135,7 +114,7 @@ class __TwigTemplate_8a6557471b9cad7206a2bac6beb3bb34 extends Template
 
     public function getDebugInfo()
     {
-        return array (  122 => 36,  112 => 32,  108 => 30,  104 => 28,  95 => 26,  91 => 25,  88 => 24,  86 => 23,  79 => 19,  73 => 16,  70 => 15,  64 => 12,  61 => 11,  59 => 10,  56 => 9,  52 => 8,  43 => 2,  39 => 1,);
+        return array (  101 => 30,  91 => 26,  81 => 19,  75 => 16,  72 => 15,  66 => 12,  63 => 11,  61 => 10,  56 => 9,  52 => 8,  43 => 2,  39 => 1,);
     }
 
     public function getSourceContext()

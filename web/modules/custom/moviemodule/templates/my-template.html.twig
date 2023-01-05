@@ -6,7 +6,7 @@
 
 <div class="grid">
   {% for value in test_var %}
-    <div class="card">
+    <div class="card" id="{{ value.id }}">
       {%  if value.profile_path is not empty %}
       <div class="profile-image card-img-top">
         <img style="max-width: 150px;" src="https://image.tmdb.org/t/p/w500{{ value.profile_path }}">
@@ -19,15 +19,9 @@
         <p> {{ value.known_for_department }}</p>
       </div>
       <div class="card-body">
-          <div class="relevant-movies hidden">
-              {% if value.known_for[1].original_title is defined or value.known_for[1].original_title is defined %}
+          <div class="relevant-movies">
                 <ul class="movies-related">
-                    {% for value2 in value.known_for %}
-                      <li> {{ value2.original_title }} </li>
-                    {% endfor %}
                 </ul>
-              {% endif %}
-
           </div>
         <a class="button btn btn-primary" href="/movieapi/actor/create/{{ value.id }}">Create and edit</a>
         </div>
