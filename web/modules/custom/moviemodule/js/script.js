@@ -1,39 +1,51 @@
 let card = document.querySelectorAll('.card');
 
-let searchMovie=async (id)=>{
+const searchMovie=async (id)=>{
   let query = await fetch(
     "https://api.themoviedb.org/3/person/"+id+"?api_key=7dddb325f57844046ce6315eeb90960f&language=en-US");
   let jsonItem = await query.json();
   return jsonItem;
 }
 
-const innerhtml = (name,pofile)=>{
-    return (`
-    <div id="popup" class="pop-container container">
-      <div class="popup" id="popup">
-        <div class="popup-header">
-        <h1> ${name} </h1>
-        <button id="close-popup">&times;</button>
-        </div> 
-        <p>${pofile}</p>
-      </div>
-     </div>
-    `);
+const innerhtml = (data,element)=>{
+  const popupContainer = document.createElement('div');
+  popupContainer.id = 'popup';
+  popupContainer.className = 'pop-container container';
+  const popup = document.createElement('div');
+  popup.className = 'popup';
+  popup.id = 'popup';
+  const popupHeader = document.createElement('div');
+  popupHeader.className = 'popup-header';
+  const h1 = document.createElement('h1');
+  h1.innerHTML = data.name;
+  const closeButton = document.createElement('button');
+  closeButton.id = 'close-popup';
+  closeButton.innerHTML = '&times;';
+  const p = document.createElement('p');
+  p.innerHTML = data.biography;
+  popupHeader.appendChild(h1);
+  popupHeader.appendChild(closeButton);
+  popup.appendChild(popupHeader);
+  popup.appendChild(p);
+  popupContainer.appendChild(popup);
+  return popupContainer;
 }
 
 
-let invoke = async (element, box) => {
+const invoke = async (element, box) => {
   return searchMovie(box.id).then((data) => {
-    element.innerHTML += innerhtml(data.name, data.biography);
-    button = element.querySelector("#close-popup");
-    button.addEventListener("click", () => {
-      popup = document.querySelector("#popup");
-      popup.remove();
+    popupContainer = innerhtml(data,element);
+    element.appendChild(popupContainer);
+    buttonClose = element.querySelector("#close-popup")
+    buttonClose.addEventListener("click", () => {
+      popupwindow = document.querySelector("#popup");
+      popupwindow.remove();
     });
-  });
+  }
+  );
 };
 
-let createPopupPromise = (element, box) => {
+const createPopupPromise = (element, box) => {
   return new Promise((resolve) => {
     resolve(invoke(element, box));
   });
