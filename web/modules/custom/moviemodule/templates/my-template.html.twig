@@ -4,6 +4,7 @@
 <h1 id="api-title">List of Actors/Director</h1>
 </br>
 
+
 <div class="grid">
   {% for value in test_var %}
     <div class="card" id="{{ value.id }}">
@@ -19,12 +20,9 @@
         <p> {{ value.known_for_department }}</p>
       </div>
       <div class="card-body">
-          <div class="relevant-movies">
-                <ul class="movies-related">
-                </ul>
-          </div>
+
         <a class="button btn btn-primary" href="/movieapi/actor/create/{{ value.id }}">Create and edit</a>
-        </div>
+      </div>
     </div>
   {% endfor %}
 </div>
