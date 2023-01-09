@@ -1,4 +1,4 @@
-let card = document.querySelectorAll('.card');
+let card = document.querySelectorAll('.show-more');
 let overlay = document.querySelector("#overlay");
 
 const createExcerpt=(word)=>{
@@ -30,7 +30,6 @@ const innerhtml = (data,element)=>{
   if(data.biography==="" || data.biography===null){
     p.innerHTML="There is no bio for this person, but you can create your own one!"
   }else{
-    //p.innerHTML = createExcerpt(data.biography);
     p.innerHTML = data.biography;
   }
   
@@ -67,6 +66,6 @@ const createPopupPromise = (element, box) => {
 card.forEach((box) => {
   box.addEventListener("click", async () => {
     element = document.querySelector(".grid");
-    await createPopupPromise(element, box);
+    await createPopupPromise(element, box.closest(".card"));
   });
 });
