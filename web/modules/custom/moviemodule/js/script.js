@@ -1,4 +1,9 @@
 let card = document.querySelectorAll('.card');
+let overlay = document.querySelector("#overlay");
+
+const createExcerpt=(word)=>{
+  return word.substring(0,1000)+"...";
+}
 
 const searchMovie=async (id)=>{
   let query = await fetch(
@@ -22,7 +27,13 @@ const innerhtml = (data,element)=>{
   closeButton.id = 'close-popup';
   closeButton.innerHTML = '&times;';
   const p = document.createElement('p');
-  p.innerHTML = data.biography;
+  if(data.biography==="" || data.biography===null){
+    p.innerHTML="There is no bio for this person, but you can create your own one!"
+  }else{
+    //p.innerHTML = createExcerpt(data.biography);
+    p.innerHTML = data.biography;
+  }
+  
   popupHeader.appendChild(h1);
   popupHeader.appendChild(closeButton);
   popup.appendChild(popupHeader);
@@ -34,11 +45,13 @@ const innerhtml = (data,element)=>{
 
 const invoke = async (element, box) => {
   return searchMovie(box.id).then((data) => {
+    overlay.classList.toggle("active");
     popupContainer = innerhtml(data,element);
     element.appendChild(popupContainer);
     buttonClose = element.querySelector("#close-popup")
     buttonClose.addEventListener("click", () => {
       popupwindow = document.querySelector("#popup");
+      overlay.classList.toggle("active");
       popupwindow.remove();
     });
   }
