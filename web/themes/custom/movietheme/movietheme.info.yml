@@ -1,0 +1,17 @@
+name: Movie and Popcorn Theme
+type: theme
+description: "A great theme for movie selling"
+core_version_requirement: ^9 || ^10
+core: 9.x
+base theme: stable9
+screenshot: movietheme.jpg
+regions:
+  header: Header
+  moviethememenu: Navigation
+  content: Content
+  footer: Footer
+  page_top: Page top
+  page_bottom: Page bottom
+libraries:
+  - movietheme/global-css
+  - movietheme/pacifico

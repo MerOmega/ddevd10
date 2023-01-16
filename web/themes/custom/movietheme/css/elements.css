@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Overall specifications for Mytheme.
+ */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+#block-movietheme-site-branding{
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  padding-top: 1rem;
+  background-color: darkred;
+  color: white;
+  min-width: 90vw;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+header ul{
+  list-style-type: none;
+}
+
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-subitems{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header img{
+  max-width: 120px;
+}
+

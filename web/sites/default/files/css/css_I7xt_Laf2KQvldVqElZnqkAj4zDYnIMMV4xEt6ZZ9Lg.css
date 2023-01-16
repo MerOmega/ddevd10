@@ -1,0 +1,2 @@
+*{margin:0;padding:0;box-sizing:border-box;}.header{background-color:darkred;display:flex;flex-direction:row;min-width:100vw;padding-left:1rem;}.header img{max-width:150px;}
+.layout-container{font-size:1em;border-radius:5px;margin:auto;position:relative;clear:both}.region-header{max-width:960px;margin:0px;height:150px;}.site-logo{float:left;max-width:150px;padding-top:35px;padding-left:10px;margin-bottom:20px;clear:both;}
