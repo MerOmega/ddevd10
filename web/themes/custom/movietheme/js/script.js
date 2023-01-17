@@ -1,4 +1,7 @@
 
-const element = document.querySelector("#edit-submit");
+const variation = document.querySelectorAll(".Variations .Variations .text-item input");
 
-console.log(typeof element)
+variation.forEach((element)=>{
+    
+    
+})

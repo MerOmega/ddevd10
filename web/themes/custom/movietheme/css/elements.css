@@ -3,107 +3,157 @@
  * Overall specifications for Mytheme.
  */
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-header{
-  position: sticky;
-}
-
-#block-movietheme-site-branding{
+#block-movietheme-site-branding {
   display: flex;
   flex-direction: column;
 }
 
-.header{
-  background-color: darkred;
+.header {
   color: white;
   min-width: 90vw;
   padding-left: 1rem;
   font-weight: 600;
 }
 
-header ul{
+header ul {
   list-style-type: none;
 }
 
-header a{
+header a {
   text-decoration: none;
   color: inherit;
 }
 
-.header-subitems{
+.header-subitems {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-#search-block-form{
-  display:flex
+#search-block-form {
+  display: flex
 }
-#search-block-form input{
+
+#search-block-form input {
   border-radius: 3px;
 }
 
 
-.header img{
+.header img {
   max-width: 120px;
 }
-.block-movietheme-main-menu ul{
-  padding:0;
-  display:flex;
+
+.block-movietheme-main-menu ul {
+  padding: 0;
+  display: flex;
 
 }
-.block-movietheme-main-menu ul li{
-  padding-left:10px;
+
+.block-movietheme-main-menu ul li {
+  padding-left: 10px;
 }
-.moviethememenu{
+
+.moviethememenu {
   position: relative;
   max-width: 30vw;
   max-height: 30vh;
 }
 
-.moviethememenu ul{
+.moviethememenu ul {
   list-style-type: none;
 }
 
 .slick--view.slick--view--last-added-movies.slick--view--last-added-movies--block-1 {
-  padding:0;
+  padding: 0;
 }
-.slick.blazy img{
+
+.slick.blazy img {
   margin: 0;
 }
+
 .slick.blazy .field-field {
   display: flex;
   justify-content: center;
 }
-.slick.blazy .field-field a{
+
+.slick.blazy .field-field a {
   text-decoration: none;
   color: black;
   font-size: 3rem;
   text-align: center;
 }
 
-.slick.blazy .field-field .text-item{
+.slick.blazy .field-field .text-item {
   font-size: 2rem;
 }
 
-.card-title{
+.card-title {
   text-align: center;
 }
 
-.field-image{
+.field-image {
   display: flex;
   justify-content: center;
 }
-.field-image img{
+
+.field-image img {
   max-width: 30vw;
 }
 
-.card-title h2 a{
+.card-title h2 a {
   text-decoration: none;
   color: black;
+}
+
+.view-wrapper .block-container div.block-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.view-wrapper .block-container div.block-container .text-item {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.view-wrapper .Variations.block-container img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
+}
+
+.view-wrapper form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.black {
+  background-color: black;
+}
+
+
+
+@media (max-width:768px) {
+
+
+  .view-wrapper .views-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .view-wrapper .field-image img {
+
+    max-width: 50vw;
+
+  }
+
 }
