@@ -43,15 +43,16 @@
 %}
 
 {% if label_hidden %}
+  <div class="field-field {{ item.content }}">
   {% if multiple %}
     <div{{ attributes }}>
       {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
+        <div{{ item.attributes }}  class="text-item">{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes }}>{{ item.content }}</div>
+      <div{{ attributes }}  class="text-item">{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -61,10 +62,11 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <div{{ item.attributes }} class="text-item">{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
     {% endif %}
+  </div>
   </div>
 {% endif %}

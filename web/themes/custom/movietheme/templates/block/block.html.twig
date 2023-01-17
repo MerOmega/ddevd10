@@ -26,7 +26,12 @@
  * @see template_preprocess_block()
  */
 #}
-<div{{ attributes }}>
+{% if attributes.id=="block-movietheme-content" %}
+<div class="{{ attributes.id }} block-container align-items-center rounded-3 border shadow-lg">
+{% else %}
+  <div class="{{ attributes.id }} block-container">
+    {% endif %}
+  <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
@@ -35,4 +40,5 @@
   {% block content %}
     {{ content }}
   {% endblock %}
+</div>
 </div>

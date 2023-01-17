@@ -12,10 +12,16 @@
  * @see template_preprocess_region()
  */
 #}
-<div class="{{ region }} p-3 text-bg-dark">
+{% if region=="header" %}
+    <div class=" {{ region }} p-3 text-bg-dark sticky-top">
+{% else %}
+    <div class="{{ region }}">
+  {% endif %}
+      <div class="container-fluid">
 {% if content %}
   <div{{ attributes }} class="{{ region }}-subitems">
     {{ content }}
   </div>
 {% endif %}
 </div>
+    </div>

@@ -67,13 +67,16 @@
  *
  */
 #}
+<div class="article card">
 <article{{ attributes }}>
 
   {{ title_prefix }}
   {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+    <div class="card-title">
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    </div>
   {% endif %}
   {{ title_suffix }}
 
@@ -92,3 +95,4 @@
   </div>
 
 </article>
+</div>
