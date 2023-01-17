@@ -1,0 +1,22 @@
+uuid: cd9532aa-9398-478f-9905-2d65d35a9247
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - movietheme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: movietheme_help
+theme: movietheme
+region: header
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

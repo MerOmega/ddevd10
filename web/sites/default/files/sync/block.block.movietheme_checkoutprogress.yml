@@ -1,0 +1,20 @@
+uuid: 93530afb-bdcb-4662-aa73-f80658068ef1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_checkout
+  theme:
+    - movietheme
+id: movietheme_checkoutprogress
+theme: movietheme
+region: moviethememenu
+weight: -7
+provider: null
+plugin: commerce_checkout_progress
+settings:
+  id: commerce_checkout_progress
+  label: 'Checkout progress'
+  label_display: visible
+  provider: commerce_checkout
+visibility: {  }

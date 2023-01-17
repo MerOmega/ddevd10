@@ -1,0 +1,29 @@
+uuid: 59036282-8c3c-40fc-97ea-c80c8dc9c0a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.last_added_movies
+  module:
+    - system
+    - views
+  theme:
+    - movietheme
+id: movietheme_views_block__last_added_movies_block_1
+theme: movietheme
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:last_added_movies-block_1'
+settings:
+  id: 'views_block:last_added_movies-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

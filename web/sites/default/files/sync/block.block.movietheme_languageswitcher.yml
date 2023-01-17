@@ -1,0 +1,28 @@
+uuid: 8481d6bb-4933-4613-a47e-604ddabfa61e
+langcode: en
+status: false
+dependencies:
+  module:
+    - language
+  theme:
+    - movietheme
+id: movietheme_languageswitcher
+theme: movietheme
+region: header
+weight: -2
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+      es: es

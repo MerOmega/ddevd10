@@ -1,0 +1,23 @@
+uuid: 98c3500d-bfb5-4a26-9e6b-4bbd09aa9c58
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - movietheme
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: movietheme_search_form_wide
+theme: movietheme
+region: header
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

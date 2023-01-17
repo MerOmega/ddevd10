@@ -1,0 +1,25 @@
+uuid: e5b4a221-90f9-49e2-9370-c2b531eb85d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - movietheme
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: movietheme_site_branding
+theme: movietheme
+region: header
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

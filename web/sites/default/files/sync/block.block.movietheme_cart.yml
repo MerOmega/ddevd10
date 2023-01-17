@@ -1,0 +1,21 @@
+uuid: eef4ec90-32e0-4349-91b1-24ffcf338075
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - movietheme
+id: movietheme_cart
+theme: movietheme
+region: header
+weight: -5
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  label_display: '0'
+  provider: commerce_cart
+  dropdown: true
+visibility: {  }
