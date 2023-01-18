@@ -2,13 +2,13 @@
  * @file
  * Overall specifications for Mytheme.
  */
-
+/* Body*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/*Header section*/
 #block-movietheme-site-branding {
   display: flex;
   flex-direction: column;
@@ -54,7 +54,17 @@ header a {
   display: flex;
 
 }
+/*END OF HEADER*/
 
+/*NAVIGATION*/
+.language-switcher-language-url{
+  position: fixed;
+  background-color: aliceblue;
+  z-index: 10;
+}
+
+/*END NAVIGATION*/
+/*HOME PAGE */
 .block-movietheme-main-menu ul li {
   padding-left: 10px;
 }
@@ -92,7 +102,9 @@ header a {
 .slick.blazy .field-field .text-item {
   font-size: 2rem;
 }
+/*END OF HOME PAGE*/
 
+/*START MOVIE CATALOG*/
 .card-title {
   text-align: center;
 }
@@ -111,23 +123,53 @@ header a {
   color: black;
 }
 
+.view-wrapper .Title .text-item{
+  font-size: 3rem;
+}
+
 .view-wrapper .block-container div.block-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  text-align: center;
   margin: 10px;
 }
 
+.view-wrapper .block-container div.block-container .Title{
+  flex-direction: column;
+}
+
 .view-wrapper .block-container div.block-container .text-item {
-  font-size: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
-.view-wrapper .Variations.block-container img {
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
+.view-wrapper .block-container div.block-container .text-item:first-child{
+  text-align: center;
+  font-size: 1.5rem;
 }
 
+
+
+.view-wrapper .Variations.block-container img {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.view-wrapper .Variations.block-container img:hover {
+  transform: scale(1.05);
+}
+
+.view-wrapper .form-item.js-form-type-select{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  
+}
+.view-wrapper .form-item.js-form-type-select label{
+  padding-right: 10px;
+}
 .view-wrapper form {
   display: flex;
   align-items: center;
@@ -139,8 +181,14 @@ header a {
   background-color: black;
 }
 
+.product-custom{
+ padding-top: 1rem;
+ padding-left: 1rem;
+}
 
 
+
+/*END MOVIE CATALOG*/
 @media (max-width:768px) {
 
 
@@ -155,5 +203,7 @@ header a {
     max-width: 50vw;
 
   }
-
+  .view-wrapper .block-container div.block-container {
+    flex-direction: column;
+  }
 }

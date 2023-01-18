@@ -26,11 +26,13 @@
  * @see template_preprocess_block()
  */
 #}
+
+
 {% if attributes.id=="block-movietheme-content" %}
 <div class="{{ attributes.id }} block-container align-items-center rounded-3 border shadow-lg">
-{% else %}
-  <div class=" {{configuration.label}} {{configuration.label_display}} block-container">
-    {% endif %}
+  {% else %}
+<div class=" {{configuration.label}} {{configuration.label_display}} block-container">
+  {% endif %}
   <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}

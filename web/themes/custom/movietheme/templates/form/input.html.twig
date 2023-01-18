@@ -10,7 +10,22 @@
  * @see template_preprocess_input()
  */
 #}
+{% if attributes.value == "Add to cart"%}
+<div class="add-to-cart">
+  {%
+    set classes = [
+    'btn',
+    'btn-dark',
+    'btn-lg',
+  ]
+  %}
+<input  {{ attributes.addClass(classes) }} {{ attributes }}>{{ children }}
+{% else %}
+<div>
 <input{{ attributes }}
 
 
-/>{{ children }}
+    />{{ children }}
+{% endif %}
+
+</div>
