@@ -9,7 +9,7 @@ global-css:
   js:
     js/bs/bootstrap.bundle.min.js: {}
     js/bs/bootstrap.min.js: {}
-    js/script.js: {}
+    js/script.js: {  }
 
 pacifico:
   license:

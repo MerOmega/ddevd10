@@ -3,6 +3,9 @@
  * Overall specifications for Mytheme.
  */
 /* Body*/
+ul{
+  margin-bottom: 0;
+}
 * {
   margin: 0;
   padding: 0;
@@ -59,6 +62,7 @@ header a {
 /*NAVIGATION*/
 .language-switcher-language-url{
   position: fixed;
+  
   background-color: aliceblue;
   z-index: 10;
 }
@@ -67,6 +71,7 @@ header a {
   display: flex;
   justify-content:center;
 }
+
 .lenguage-image-icon{
   max-width: 60px;
 }
@@ -193,9 +198,73 @@ header a {
  padding-left: 1rem;
 }
 
-
-
 /*END MOVIE CATALOG*/
+
+/* PAGES */
+
+#block-movietheme-page-title h1{
+  text-align: center;
+}
+
+#block-movietheme-primary-local-tasks ul{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+#block-movietheme-primary-local-tasks ul li{
+  padding:1rem;
+  margin:1px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+#block-movietheme-primary-local-tasks ul li a{
+  font-weight: bold;
+  padding:1rem;
+  margin:1px;
+  text-decoration: none;
+  color: rgb(42, 116, 255);
+}
+#block-movietheme-primary-local-tasks > div > div.navbar-light.bg-light.tasks-bar{
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.171);
+  padding: 5px;
+  border-radius: 10px;
+}
+.navbar.tasks-bar{
+ 
+  padding: 1rem;
+}
+
+.product-custom img{
+  border-radius: 10px;
+}
+
+.navbar.tasks-bar .task-item li{
+  margin-top: 1rem;
+}
+.product-custom .layout--twocol-section{
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: repeat(2,1fr);
+}
+.product-custom{
+  padding-bottom: 1rem;
+}
+.product-custom .product--variation-field--variation_price__1{
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.product-custom .Genre{
+  margin-top: 1rem;
+}
+
+/*FOOTER*/
+.footer{
+  min-height: 20vh;
+}
+
 @media (max-width:768px) {
 
 
