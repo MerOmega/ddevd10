@@ -1,17 +1,17 @@
-uuid: 22f40d25-3e3e-4d79-ba54-a2c1cb1a8e87
+uuid: 5e70bad2-d2cd-4bb7-b04a-9b3c2615b7f3
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - movietheme
+    - bootstrap5
 _core:
-  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
-id: movietheme_powered
-theme: movietheme
-region: header
-weight: -1
+  default_config_hash: 2_xxaOb8b_0AUgYFdJLxIBDDwufyh6YozhGfBd97p38
+id: bootstrap5_powered_by_drupal
+theme: bootstrap5
+region: footer
+weight: 0
 provider: null
 plugin: system_powered_by_block
 settings:

@@ -249,6 +249,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: 'carousel carousel-front'
       header: {  }
       footer: {  }
       display_extenders: {  }

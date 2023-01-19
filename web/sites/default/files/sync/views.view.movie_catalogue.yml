@@ -368,6 +368,7 @@ display:
           admin_label: 'field_director: Content'
           plugin_id: standard
           required: false
+      css_class: view-wrapper
       group_by: false
       header: {  }
       footer: {  }

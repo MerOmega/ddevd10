@@ -1,6 +1,6 @@
 uuid: 8481d6bb-4933-4613-a47e-604ddabfa61e
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - language
@@ -8,8 +8,8 @@ dependencies:
     - movietheme
 id: movietheme_languageswitcher
 theme: movietheme
-region: header
-weight: -2
+region: moviethememenu
+weight: -4
 provider: null
 plugin: 'language_block:language_interface'
 settings:

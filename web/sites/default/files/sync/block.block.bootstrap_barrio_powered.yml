@@ -1,17 +1,17 @@
-uuid: 22f40d25-3e3e-4d79-ba54-a2c1cb1a8e87
+uuid: acd5505c-c5bd-4191-8cea-598dec5f7984
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - movietheme
+    - bootstrap_barrio
 _core:
-  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
-id: movietheme_powered
-theme: movietheme
-region: header
-weight: -1
+  default_config_hash: uHGQeXpjudF5HkwGniQ_zzUngqcc3iAzzE7fdjWJiyA
+id: bootstrap_barrio_powered
+theme: bootstrap_barrio
+region: footer_fifth
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:
