@@ -18,7 +18,18 @@ function waitForEl(selector, callback) {
     element.addEventListener("click", function() {
       element.classList.add("hidden");
 
-      console.log(document.querySelectorAll(".lenguage-block-inner"))
+      document.querySelectorAll(".lenguage-block-inner").forEach((data)=>{
+        data.classList.toggle("hidden")
+      })
+
+      let buttonHide=document.querySelector("#hide-lenguage-button")
+      buttonHide.addEventListener("click",()=>{
+        element.classList.toggle("hidden")
+        document.querySelectorAll(".lenguage-block-inner").forEach((data)=>{
+            data.classList.toggle("hidden")
+          })
+          
+      })
 
     });
   });
