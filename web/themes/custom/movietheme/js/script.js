@@ -2,7 +2,28 @@
 const images = document.querySelectorAll(".field-image img:not(.Shopping)");
 const elements = document.querySelectorAll(".field-image img:not(.Shopping)");
 
+/*As drupal add content dynamically some elements might not be in the DOM*/
+function waitForEl(selector, callback) {
+    if (document.querySelector(selector)) {
+      callback();
+    } else {
+      setTimeout(function() {
+        waitForEl(selector, callback);
+      }, 100);
+    }
+  }
+  
+  waitForEl("#lenguage-short img", ()=>{
+    var element = document.querySelector("#lenguage-short img");
+    element.addEventListener("click", function() {
+      element.classList.add("hidden");
 
+      console.log(document.querySelectorAll(".lenguage-block-inner"))
+
+    });
+  });
+
+/* END OF DOM WAIT */
 function getAverageColor(image) {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");

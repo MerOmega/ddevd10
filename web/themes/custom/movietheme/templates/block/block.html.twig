@@ -27,20 +27,49 @@
  */
 #}
 
-
+{# Initial if for differenct blocks #}
+{% if  attributes.id =="block-movietheme-languageswitcher" %}
+  {% set lenguage=true %}
+  {% else %}
+  {% set lenguage=false %}
+{% endif %}
 {% if attributes.id=="block-movietheme-content" %}
 <div class="{{ attributes.id }} block-container align-items-center rounded-3 border shadow-lg">
+  {% elseif  attributes.id =="block-movietheme-languageswitcher"%}
+      <div class=" {{configuration.label}} {{configuration.label_display}} lenguage-block block-container">
   {% else %}
-<div class=" {{configuration.label}} {{configuration.label_display}} block-container">
+      <div class=" {{configuration.label}} {{configuration.label_display}} block-container">
   {% endif %}
+
+  {#  #}
   <div{{ attributes }}>
   {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+      {% if label %}
+        {% if  attributes.id =="block-movietheme-languageswitcher"%}
+          <div id="lenguage-short" class="lenguage-window showing">
+            <img class="lenguage-image-icon" src="https://cdn-icons-png.flaticon.com/512/3269/3269817.png" alt=""/>
+          </div>
+        {% endif %}
+        <div {% if lenguage %} 
+              class="lenguage-block-inner hidden"
+                {% endif %}>
+          <h2{{ title_attributes }}>{{ label }}</h2>
+        </div>
+      {% endif %}
+  <div {% if lenguage %} 
+    class="lenguage-block-inner hidden"
+      {% endif %}
+  >
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+    {% if lenguage %} 
+      <div class="hide-block">
+        <button class="btn btn-dark btn-lg">Hide me</button>
+      </div>
+    {% endif %}
+  </div>
 </div>
 </div>

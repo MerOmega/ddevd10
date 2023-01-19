@@ -63,6 +63,13 @@ header a {
   z-index: 10;
 }
 
+#lenguage-short{
+  display: flex;
+  justify-content:center;
+}
+.lenguage-image-icon{
+  max-width: 60px;
+}
 /*END NAVIGATION*/
 /*HOME PAGE */
 .block-movietheme-main-menu ul li {
