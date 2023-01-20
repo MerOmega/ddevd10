@@ -10,6 +10,13 @@
  * @see template_preprocess_input()
  */
 #}
+{%
+    set buttonClasses = [
+    'btn',
+    'btn-primary',
+  ]
+  %}
+
 {% if attributes.value == "Add to cart"%}
 <div class="add-to-cart">
   {%
@@ -22,7 +29,13 @@
 <input  {{ attributes.addClass(classes) }} {{ attributes }}>{{ children }}
 {% else %}
 <div>
-<input{{ attributes }}
+<input 
+  {% if attributes.hasClass("button") %}
+    {{ attributes.addClass(buttonClasses) }}
+  {% elseif attributes.hasClass("form-search") %}
+    {{ attributes.addClass("form-control") }}
+  {% endif %}
+ {{ attributes }}
 
 
     />{{ children }}
